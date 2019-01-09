@@ -22,6 +22,7 @@ class QuestionViewController: UIViewController {
     
     
     @IBOutlet weak var rangedStackView: UIStackView!
+    @IBOutlet weak var rangedSlider: UISlider!
     @IBOutlet var rangetLabel: [UILabel]!
     @IBOutlet weak var rangedButton: UIButton!
     
@@ -35,7 +36,7 @@ class QuestionViewController: UIViewController {
     var questions: [Question] = [
         Question(question: "Что вы предпочитаете?", type: .single, answers: [
             Answer(text: "Мясо", animal: .dog),
-            Answer(text: "Рыбу", animal: .cat),
+            Answer(text: "Бамбук", animal: .cat),
             Answer(text: "Морковку", animal: .rabbit),
             Answer(text: "Капусту", animal: .turtle),
             ]),
@@ -112,10 +113,12 @@ class QuestionViewController: UIViewController {
     }
     
     func nextQuestion () {
-      //  if questionIndex < questions.count {
         questionIndex += 1
+        if questionIndex < questions.count {
         updateUI()
-      //  }
+        } else {
+            performSegue(withIdentifier: "ResultsSegue", sender: nil)
+        }
     }
     // MARK: -@IBAction
     
@@ -130,7 +133,7 @@ class QuestionViewController: UIViewController {
         let answers = questions[questionIndex].answers
         
         for index in 0..<min(multiplayLabels.count, answers.count) {
-            let stackView = multiplayLabel[index].superview!
+            let stackView = multiplayLabels[index].superview!
             let multiplaySwitch = stackView.subviews.last as! UISwitch
             if multiplaySwitch.isOn {
                 answersChosen.append(answers[index])
@@ -141,13 +144,18 @@ class QuestionViewController: UIViewController {
     
     @IBAction func RangedButtonPressed(_ sender: UIButton) {
         let answers = questions[questionIndex].answers
-        rangetLabel.first?.text = answers.first?.text
-        rangetLabel.last?.text = answers.last?.text
+        let index = Int(rangedSlider.value * Float(answers.count - 1))
+        answersChosen.append(answers[index])
         nextQuestion()
     }
+    
+    
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultVC = segue.destination as? ResultViewController {
+            resultVC.answers = answersChosen
+        }
         
 
     }

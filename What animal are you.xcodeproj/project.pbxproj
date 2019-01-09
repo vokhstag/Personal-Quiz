@@ -14,7 +14,6 @@
 		1B1EF6D121B82914002B6A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1EF6CF21B82914002B6A19 /* LaunchScreen.storyboard */; };
 		1B7B472521C427490067F9EE /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7B472421C427490067F9EE /* ResultViewController.swift */; };
 		1B7B472C21C42CB20067F9EE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7B472B21C42CB20067F9EE /* Question.swift */; };
-		1B7B472E21C4BEBD0067F9EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B7B472D21C4BEBD0067F9EE /* Default-568h@2x.png */; };
 		1B7B473021C4BF1E0067F9EE /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7B472F21C4BF1E0067F9EE /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		1B1EF6D221B82914002B6A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7B472421C427490067F9EE /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		1B7B472B21C42CB20067F9EE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		1B7B472D21C4BEBD0067F9EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1B7B472F21C4BF1E0067F9EE /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +44,6 @@
 		1B1EF6BA21B8290F002B6A19 = {
 			isa = PBXGroup;
 			children = (
-				1B7B472D21C4BEBD0067F9EE /* Default-568h@2x.png */,
 				1B1EF6C521B8290F002B6A19 /* What animal are you */,
 				1B1EF6C421B8290F002B6A19 /* Products */,
 				1B7B472821C427C60067F9EE /* Supporting Files */,
@@ -167,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B1EF6D121B82914002B6A19 /* LaunchScreen.storyboard in Resources */,
-				1B7B472E21C4BEBD0067F9EE /* Default-568h@2x.png in Resources */,
 				1B1EF6CE21B82914002B6A19 /* Assets.xcassets in Resources */,
 				1B1EF6CC21B82910002B6A19 /* Main.storyboard in Resources */,
 			);

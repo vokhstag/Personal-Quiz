@@ -24,7 +24,7 @@ struct Answer {
 }
 
 enum AnymalType: Character {
-    case cat = "🐱"
+    case cat = "🐼"
     case rabbit = "🐰"
     case turtle = "🐢"
     case dog = "🐶"
@@ -32,7 +32,7 @@ enum AnymalType: Character {
     var difinition: String {
         switch self {
         case .cat:
-            return "Вы гуляете сами по себе.  Вам нравится свобода и самостоятельность."
+            return "Вы большая здоровая панда.  Вам нравится спать и жрать."
         case .rabbit:
             return "Вам нравится всё мягкое.  Вы здоровы и полны энергии."
         case .turtle:
